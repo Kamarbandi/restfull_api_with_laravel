@@ -20,3 +20,6 @@ Route::get('test', function (){
 });
 
 Route::get('/posts', 'PostsController@index');
+Route::get('/soap', 'SoapController@index');
+
+

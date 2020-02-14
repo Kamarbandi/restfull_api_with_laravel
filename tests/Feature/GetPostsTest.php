@@ -66,7 +66,6 @@ class GetPostsTest extends TestCase
             'video_url' => 'https://www.youtube.com/watch?v=Joyz5S0skr4'
         ]);
 
-
         $response = $this->getJson('/posts?has_video=1');
         $response->assertStatus(200);
 
