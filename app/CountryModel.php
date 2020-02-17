@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Country extends Model
+class CountryModel extends Model
 {
     protected $table = "_z_country";
     public $timestamps = false;

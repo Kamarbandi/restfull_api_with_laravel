@@ -10,8 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Arr;
 
 Route::get('/', function () {
+    $a =  Arr::collapse([['name' => 'Desk', 'price' => null], ['a'=>' Kamar']]);
+    dd($a);
+
+
     return view('welcome');
 });
 
@@ -23,3 +28,7 @@ Route::get('/posts', 'PostsController@index');
 Route::get('/soap', 'SoapController@index');
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

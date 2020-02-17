@@ -244,7 +244,7 @@ class StudentRegister extends Migration
             $table->integer('modified')->unsigned();
             $table->integer('modified_by')->unsigned();
             $table->boolean('record_deleted')->default(0);
-a
+
             $table->engine = 'InnoDB';
         });
         Schema::connection('mysql')->table('_z_single_data', function (Blueprint $table) {
@@ -305,7 +305,7 @@ a
         DB::connection('mysql')->table('_z_single_data')->insert($dataArray);
         /*
         |--------------------------------------------------------------------------
-        | Country
+        | CountryModel
         |--------------------------------------------------------------------------
         */
         Schema::connection('mysql')->create('_z_country', function (Blueprint $table) {
@@ -571,7 +571,7 @@ a
         ]);
         /*
         |--------------------------------------------------------------------------
-        | Country - Province
+        | CountryModel - Province
         |--------------------------------------------------------------------------
         */
         Schema::connection('mysql')->create('_z_country_province', function (Blueprint $table) {
@@ -603,7 +603,7 @@ a
         ]);
         /*
         |--------------------------------------------------------------------------
-        | Country - Province - City
+        | CountryModel - Province - City
         |--------------------------------------------------------------------------
         */
         Schema::connection('mysql')->create('_z_country_city', function (Blueprint $table) {
@@ -635,7 +635,7 @@ a
         ]);
         /*
         |--------------------------------------------------------------------------
-        | Country - Province - City - Region
+        | CountryModel - Province - City - Region
         |--------------------------------------------------------------------------
         */
         Schema::connection('mysql')->create('_z_country_region', function (Blueprint $table) {
@@ -667,7 +667,7 @@ a
         ]);
         /*
         |--------------------------------------------------------------------------
-        | Country - Province - City - Region - SubRegion
+        | CountryModel - Province - City - Region - SubRegion
         |--------------------------------------------------------------------------
         */
         Schema::connection('mysql')->create('_z_country_subregion', function (Blueprint $table) {
